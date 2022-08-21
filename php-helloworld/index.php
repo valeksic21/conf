@@ -1,6 +1,6 @@
 <?php
 print "Hello, World! php version is " . PHP_VERSION . "\n";
-print "New line\n";
-print "Greetings!\n";
-print "Automatically built"; 
+<print "<br>New line\n";
+print "<br>Greetings!\n";
+print "<br>Today is " . date("Y/m/d") 
 ?>
