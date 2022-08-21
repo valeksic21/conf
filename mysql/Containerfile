@@ -1,0 +1,5 @@
+FROM registry.redhat.io/rhel8/mysql-80
+LABEL description="This is a custom mysql image build"
+COPY ./db.* /usr/tmp
+USER mysql
+WORKDIR /usr/tmp
