@@ -2,9 +2,8 @@ FROM registry.redhat.io/rhel8/httpd-24
 MAINTAINER Vjeko <vjekoslav.aleksic@gmail.com>
 LABEL description="image for apache server customized for presentation"
 EXPOSE 8080
-ENV MESSAGE="<BR>Usage of environment variable presentation"
+ENV MESSAGE="How are you?"
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
 RUN echo  "Date of container build: "$(date) >> /var/www/html/index.html &&\
     echo  "<br>Hello to the Conference!" >> /var/www/html/index.html &&\
-    echo  "<br>Modified image!" >> /var/www/html/index.html &&\
-    echo $MESSAGE >> /var/www/html/index.html
+    echo "<br>"$MESSAGE >> /var/www/html/index.html
